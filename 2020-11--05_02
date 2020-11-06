@@ -1,0 +1,12 @@
+array = list(map(int,input().split()))
+n = int(input())
+flag = 0
+comparison_array = []
+for i in range(0,len(array)):
+    difference = n - array[i]
+    if(difference in comparison_array):
+        print(difference,array[i])
+        flag+=1
+    comparison_array.append(array[i])
+if(flag==0):
+    print("No pairs")
